@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  adv_decl:
+    image: valyo/adv_decl:latest
+    container_name: adv_decl    
+    volumes:
+      - /Users/val/ownCloud/dev/scraping/adv_decl/adv_decl.v01.py:/code/adv_decl.py
+      - /Users/val/ownCloud/dev/scraping/adv_decl/adv-decl-5f46e18b7139.json:/code/adv-decl-5f46e18b7139.json
+    environment:
+      DRYRUN: ${DRYRUN}
+      # DRYRUN: dry
+    # command: ["python", "./adv_decl.py"]
+    # command: ["cat", "/code/adv_decl.py"]
+    # command: ["env"]
