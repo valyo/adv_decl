@@ -31,7 +31,6 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
-        run: echo Hello, world!
 
     
       - name: Set up Docker Buildx
