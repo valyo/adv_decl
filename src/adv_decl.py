@@ -108,7 +108,7 @@ def push_data(entries,dest,key):
 def main():
     currentDate = datetime.today().strftime('%Y-%m-%d')
     print(currentDate)
-    print(links_dict["adv_decl"])
+    print(os.environ.get('DRYRUN'))
     for key, value in links_dict.items():
         print(key)
         if "adv_decl" in key:

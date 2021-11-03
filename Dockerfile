@@ -19,6 +19,5 @@ COPY src/ .
 
 # command to run on container start
 CMD [ "python", "./adv_decl.py" ]
-# CMD [ "python", "./adv_decl.v01.py" ]
 
 
