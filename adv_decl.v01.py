@@ -16,6 +16,7 @@ from time import sleep
 # ---- Global variables ----
 
 #TODO   take out the dictionary into adv_decl.config file
+currentDate = datetime.today().strftime('%Y-%m-%d')
 links_dict = {
     'adv_decl': 'https://www.avanza.se/aktier/vinnare-forlorare.html',
     'adv_decl_fastigh': 'https://www.avanza.se/aktier/vinnare-forlorare.html?countryCode=SE&sectorIds=53&timeUnit=TODAY',
@@ -106,9 +107,8 @@ def push_data(entries,dest,key):
 
 
 def main():
-    currentDate = datetime.today().strftime('%Y-%m-%d')
     print(currentDate)
-    print(links_dict["adv_decl"])
+    print(os.environ.get('DRYRUN'))
     for key, value in links_dict.items():
         print(key)
         if "adv_decl" in key:
